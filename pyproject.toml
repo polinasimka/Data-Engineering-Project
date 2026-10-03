@@ -1,0 +1,8 @@
+[project]
+name = "data-engineering-project"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "gdown>=6.4.1",
+    "pandas>=3.0.6",
+]
