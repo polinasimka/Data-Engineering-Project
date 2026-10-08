@@ -6,3 +6,8 @@ dependencies = [
     "gdown>=6.4.1",
     "pandas>=3.0.6",
 ]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]
