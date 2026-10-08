@@ -32,4 +32,7 @@ def convert_types(data):
     
 
 if __name__ == "__main__":
-    load_data()
+    data = load_data()
+    data = convert_types(data)
+    print(data.dtypes)
+    data.to_parquet("data/finance_ecommerce_typed.parquet", index=False)
