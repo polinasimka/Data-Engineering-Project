@@ -10,5 +10,6 @@ if response.status_code == 200:
     df = pd.DataFrame(races)
     df = df[["season", "round", "raceName", "date", "time"]]
     print(df.head(10))
+    df.to_csv("data/f1_races_2025.csv", index=False)
 else:
     print("Ошибка:", response.status_code)
