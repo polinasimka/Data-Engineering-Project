@@ -6,6 +6,7 @@ dependencies = [
     "gdown>=6.4.1",
     "pandas>=3.0.6",
     "pyarrow>=25.0.1",
+    "requests>=2.34.2",
 ]
 
 [dependency-groups]
