@@ -32,3 +32,23 @@ uv sync --frozen
 uv run python data_loader.py
 ```
 При запуске датасет скачивается с Google Drive в папку `data`, далее в консоль выводятся первые 10 строк.
+
+## Загрузка данных в базу
+
+Создать в корне проекта файл `.env` с параметрами подключения к базе данных:
+
+```text
+DB_USER=
+DB_PASSWORD=
+DB_URL=
+DB_PORT=
+DB_ROOT_BASE=
+```
+
+Запустить скрипт загрузки данных в базу:
+
+```bash
+uv run python scripts/write_to_db.py
+```
+
+Скрипт загружает 100 строк из файла `data/finance_ecommerce_typed.parquet` в PostgreSQL.
