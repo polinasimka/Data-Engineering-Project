@@ -32,12 +32,17 @@ if missing:
         f"Не заданы переменные окружения: {', '.join(missing)}"
     )
 
+try:
+    db_port = int(db_port)
+except ValueError as error:
+    raise ValueError("DB_PORT должен быть числом") from error
+
 connection_url = URL.create(
     "postgresql+psycopg2",
     username=db_user,
     password=db_password,
     host=db_url,
-    port=int(db_port),
+    port=db_port,
     database=db_root_base,
 )
 
@@ -49,7 +54,7 @@ data = data.head(ROWS_TO_LOAD)
 data.to_sql(
     name="simaninapa",
     con=engine,
-    if_exists="replace",
+    if_exists="replace",  # при повторном запуске в таблице остаётся ровно 100 строк
     index=False,
 )
 
