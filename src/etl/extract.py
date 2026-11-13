@@ -4,7 +4,7 @@ import gdown
 import pandas as pd
 
 
-def load_data():
+def load_data(preview=10):
     os.makedirs("data", exist_ok=True)
 
     url = "https://drive.google.com/uc?id=1Xk2KMJSVp_JmmAD-3fYD2w8qVVBaelJJ"
@@ -15,5 +15,5 @@ def load_data():
 
     data = pd.read_csv(output)
 
-    print(data.head(10))
+    print(data.head(preview))
     return data
