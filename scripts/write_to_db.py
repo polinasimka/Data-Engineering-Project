@@ -54,7 +54,7 @@ data = data.head(ROWS_TO_LOAD)
 data.to_sql(
     name="simaninapa",
     con=engine,
-    if_exists="replace",  # при повторном запуске в таблице остаётся ровно 100 строк
+    if_exists="replace",  
     index=False,
 )
 
