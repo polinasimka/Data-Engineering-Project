@@ -9,7 +9,7 @@ DATA_PATH = "data/finance_ecommerce_typed.parquet"
 ROWS_TO_LOAD = 100
 
 
-def load_data_to_db():
+def load_data_to_db(data):
     load_dotenv()
 
     db_user = os.getenv("DB_USER")
@@ -49,8 +49,8 @@ def load_data_to_db():
 
     engine = create_engine(connection_url)
 
-    data = pd.read_parquet(DATA_PATH)
     data = data.head(ROWS_TO_LOAD)
+
 
     data.to_sql(
         name="simaninapa",

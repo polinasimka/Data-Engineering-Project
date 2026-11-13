@@ -16,10 +16,10 @@ def main():
     args = parser.parse_args()
 
     data = load_data(args.preview)
-    convert_types(data)
-    load_data_to_db()
+    data = convert_types(data)
+    load_data_to_db(data)
 
 
 if __name__ == "__main__":
     main()
-    
+      
