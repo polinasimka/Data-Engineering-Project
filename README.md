@@ -32,12 +32,12 @@ Data-Engineering-Project/
 │   └── EDA.ipynb
 ├── scripts/
 │   ├── read_api.py
+│   ├── data_loader.py
 │   ├── write_to_db.py
 │   ├── data_10rows.png
 │   └── README.md
 ├── data/                   
 ├── .gitignore
-├── data_loader.py
 ├── pyproject.toml
 ├── uv.lock
 └── README.md
@@ -53,7 +53,6 @@ Data-Engineering-Project/
 | `notebooks/data_exploration.ipynb` | Первичное исследование данных |
 | `notebooks/EDA.ipynb` | Разведочный анализ данных |
 | `scripts/` | Отдельные скрипты предыдущих заданий: работа с API и запись в БД |
-| `data_loader.py` | Скрипт загрузки и преобразования данных из предыдущего задания |
 | `data/` | Исходный CSV и подготовленный Parquet; создаётся при запуске |
 | `pyproject.toml` | Настройки проекта, сборки пакета и зависимости |
 | `uv.lock` | Зафиксированные версии зависимостей |
